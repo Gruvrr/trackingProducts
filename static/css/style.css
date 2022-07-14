@@ -1,0 +1,12 @@
+.table {
+    counter-reset: trCount;
+    overflow: auto;
+    white-space: nowrap;
+}
+.table tr td:first-child:before {
+    position:relative;
+    counter-increment: trCount;
+    content:counter(trCount);
+    color:#1d1f21;
+    background:#c5c8c6;
+}

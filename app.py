@@ -34,8 +34,6 @@ def getAllProducts():
                     'last_change_date': el[7]
                 }
                 data_list.append(values)
-            print(type(data_list))
-            print(data_list)
     except Exception as _ex:
         print("ERROR", _ex)
     finally:

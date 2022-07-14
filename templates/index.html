@@ -10,31 +10,32 @@
         <h1>
             Таблица всех добавленных товаров
         </h1>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Артикул</th>
+                <th scope="col">цена</th>
+                <th scope="col">мега</th>
+                <th scope="col">Орбитальная</th>
+                <th scope="col">Доватора</th>
+                <th scope="col">ссылка</th>
+            </tr>
+        </thead>
+        <tbody>
         {% for el in data %}
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Артикул</th>
-                            <th scope="col">цена</th>
-                            <th scope="col">мега</th>
-                            <th scope="col">Орбитальная</th>
-                            <th scope="col">Доватора</th>
-                            <th scope="col">ссылка</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>{{ el.product_articul }}</td>
-                            <td>{{ el.product_price }}</td>
-                            <td>{{ el.stock_mega }}</td>
-                            <td>{{ el.stock_severniy }}</td>
-                            <td>{{ el.stock_dovatora }}</td>
-                            <td>{{ el.product_url }}</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <tr>
+                <td></td>
+                <td>{{ el.product_articul }}</td>
+                <td>{{ el.product_price }}</td>
+                <td>{{ el.stock_mega }}</td>
+                <td>{{ el.stock_severniy }}</td>
+                <td>{{ el.stock_dovatora }}</td>
+                <td><a href="{{ el.product_url }}" target="_blank">ссылка на товар</a></td>
+            </tr>
         {% endfor %}
+        </tbody>
+    </table>
     </div>
 {% endblock %}
