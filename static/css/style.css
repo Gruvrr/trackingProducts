@@ -8,5 +8,4 @@
     counter-increment: trCount;
     content:counter(trCount);
     color:#1d1f21;
-    background:#c5c8c6;
 }

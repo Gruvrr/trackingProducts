@@ -11,7 +11,6 @@ def get_unit_data(url):
         driver.get(url)
         time.sleep(random.uniform(1.2, 2.5))
 
-
         # find articul
         new_articul = ''
         articul = driver.find_element(By.CLASS_NAME, "t12nw7s2_pdp").text
@@ -60,8 +59,6 @@ def get_unit_data(url):
             'stock_dovatora': dovatora,
             'last_change_date': datetime.datetime.now(),
         }
-
-
 
     except Exception as ex:
         print(ex)

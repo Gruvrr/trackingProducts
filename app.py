@@ -1,6 +1,9 @@
+import datetime
+
 import psycopg2
 from flask import Flask, render_template, request
 import scrapping_lerua
+import addUnitsEveryDay
 from config import host, user, password, db_name
 
 
@@ -68,6 +71,12 @@ def addProduct():
             print("[INFO]DATABASE Connection closed")
         print("[INFO] ITS ALL OK")
         return render_template('addProduct.html', the_title='Главная страница', Message='Товар добавлен успешно')
+
+
+def work_every_day():
+    while True:
+        if datetime.time(hour=0, minute=10):
+            addUnitsEveryDay.updateDataEveryday()
 
 
 if __name__ == '__main__':
